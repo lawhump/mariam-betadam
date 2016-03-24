@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%;
+
+  &:before {}
+&:after {}
+}
+
+body {
+  background: #fafafa;
+  border-left: 10px solid #111;
+  border-right: 10px solid #111;
+  color: $font-color;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+
+  &:before, &:after {
+    background: #111;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
+
+h1 {
+  margin: 0;
+}
