@@ -1,26 +1,38 @@
 var container = document.getElementById('placeholder');
 var destination = location.hash;
 
-var responseProjHandler = function(res) {
-  console.log(res);
+var fadeContentIn = function() {
+  container.firstChild.className += ' fade-in';
+}
+
+var responseProjsHandler = function(res) {
   // TODO Error checking
   container.innerHTML = res;
   initializeBrick();
+  fadeContentIn();
+};
+
+var responseProjHandler = function(res) {
+  // TODO Error checking
+  container.innerHTML = res;
+  fadeContentIn();
 };
 
 var responseWorkHandler = function(res) {
   console.log(res);
   // TODO Error checking
   container.innerHTML = res;
+  fadeContentIn();
 };
 
 var responseContHandler = function(res) {
   console.log(res);
   // TODO Error checking
   container.innerHTML = res;
+  fadeContentIn();
 };
 
-var checkHash = function() {
+var route = function() {
   console.log(destination);
   if (destination == '#work') {
     getMarkup('../markup/work.html', responseWorkHandler);
@@ -30,8 +42,12 @@ var checkHash = function() {
     getMarkup('../markup/contact.html', responseContHandler);
   }
 
+  else if (destination.includes('project')) {
+    getMarkup('../markup/project.html', responseProjHandler);
+  }
+
   else {
-    getMarkup('../markup/projects.html', responseProjHandler);
+    getMarkup('../markup/projects.html', responseProjsHandler);
   }
 };
 
@@ -45,6 +61,7 @@ function initializeBrick() {
   });
 
   instance.pack();
+  document.querySelector('.projects').addEventListener('click', clickHandler);
   console.log(instance);
 }
 
@@ -59,9 +76,18 @@ function getMarkup(url, callback) {
   xmlHttp.send(null);
 }
 
+function clickHandler(e) {
+  if(e.target && e.target.nodeName == "DIV") {
+		// List item found!  Output the ID!
+    console.log(e.target.dataset.projectNumber);
+    document.querySelector('.projects').className += 'fade-out';
+    window.location.hash = "#project/" + e.target.dataset.projectNumber;
+    destination = location.hash;
+	}
+}
 
-window.onhashchange = checkHash;
+window.onhashchange = route;
 
 (function() {
-  checkHash();
+  route();
 })();

@@ -1,12 +1,14 @@
 .container {
   margin: 6rem auto 0 auto;
   max-width: 960px;
+  min-height: 60vh;
   padding-bottom: 9rem;
   width: 90%;
 }
 
 .project {
   background-color: #ccc;
+  cursor: pointer;
   width: 30.5%;
 }
 

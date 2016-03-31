@@ -7,8 +7,8 @@ html {
 
 body {
   background: #fafafa;
-  border-left: 10px solid #111;
-  border-right: 10px solid #111;
+  border-left: 1.2rem solid #111;
+  border-right: 1.2rem solid #111;
   color: $font-color;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -38,4 +38,30 @@ body {
 
 h1 {
   margin: 0;
+}
+
+.container {
+  > div {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fade-in) {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  @include animation('fade-in .8s ease-in-out');
+  animation-fill-mode: forwards;
+}
+
+@include keyframes(fade-out) {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-out {
+  @include animation('fade-in .8s ease-in-out');
+  animation-fill-mode: forwards;
 }
