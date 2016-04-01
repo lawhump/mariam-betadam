@@ -60,7 +60,7 @@ function initializeGrid() {
     itemSelector: '.project',
     isFitWidth: true,
     columnWidth: '.grid-sizer',
-    gutter: 40
+    gutter: 38
   };
   var msnry = new Masonry(grid, options);
 
