@@ -35,13 +35,14 @@ var responseContHandler = function(res) {
 };
 
 var route = function() {
+  destination = location.hash;
   console.log(destination);
   if (destination == '#work') {
     getMarkup('../markup/work.html', responseWorkHandler);
   }
 
-  else if (destination == '#about') {
-    break;
+  else if (destination.length == 0) {
+    getMarkup('../markup/projects.html', responseProjsHandler);
   }
 
   else if (destination.includes('project')) {
@@ -49,7 +50,7 @@ var route = function() {
   }
 
   else {
-    getMarkup('../markup/projects.html', responseProjsHandler);
+    return;
   }
 };
 
@@ -84,7 +85,6 @@ function clickHandler(e) {
     console.log(e.target.dataset.projectNumber);
     document.querySelector('.projects').className += 'fade-out';
     window.location.hash = '#project/' + e.target.dataset.projectNumber;
-    destination = location.hash;
 	}
 }
 
