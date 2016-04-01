@@ -59,9 +59,9 @@ function initializeGrid() {
   var grid = document.querySelector('.projects');
   var options = {
     itemSelector: '.project',
-    isFitWidth: true,
+    percentPosition: true,
     columnWidth: '.grid-sizer',
-    gutter: 38
+    gutter: '.gutter-sizer'
   };
   var msnry = new Masonry(grid, options);
 

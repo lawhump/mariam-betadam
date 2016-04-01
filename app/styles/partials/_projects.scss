@@ -1,12 +1,15 @@
 .project {
   background-color: #ccc;
   cursor: pointer;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .project, .grid-sizer {
+  // width: 29.4rem;
   width: 30.5%;
 }
+
+.gutter-sizer { width: 4%; }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -15,7 +18,7 @@
   }
 }
 
-/* Small Devices, Tablets */
+/* Mobile phones and shit */
 @media only screen and (max-width : 480px) {
   .project, .grid-sizer {
     width: 100%;
