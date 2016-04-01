@@ -1,3 +1,5 @@
+'use strict';
+
 var container = document.getElementById('placeholder');
 var destination = location.hash;
 
@@ -72,16 +74,16 @@ function getMarkup(url, callback) {
       callback(xmlHttp.responseText);
     }
   }
-  xmlHttp.open("GET", url, true); // true for asynchronous
+  xmlHttp.open('GET', url, true); // true for asynchronous
   xmlHttp.send(null);
 }
 
 function clickHandler(e) {
-  if(e.target && e.target.nodeName == "DIV") {
+  if(e.target && e.target.nodeName == 'DIV') {
 		// List item found!  Output the ID!
     console.log(e.target.dataset.projectNumber);
     document.querySelector('.projects').className += 'fade-out';
-    window.location.hash = "#project/" + e.target.dataset.projectNumber;
+    window.location.hash = '#project/' + e.target.dataset.projectNumber;
     destination = location.hash;
 	}
 }
