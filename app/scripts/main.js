@@ -10,7 +10,7 @@ var fadeContentIn = function() {
 var responseProjsHandler = function(res) {
   // TODO Error checking
   container.innerHTML = res;
-  initializeBrick();
+  initializeGrid();
   fadeContentIn();
 };
 
@@ -40,8 +40,8 @@ var route = function() {
     getMarkup('../markup/work.html', responseWorkHandler);
   }
 
-  else if (destination == '#contact') {
-    getMarkup('../markup/contact.html', responseContHandler);
+  else if (destination == '#about') {
+    break;
   }
 
   else if (destination.includes('project')) {
@@ -54,17 +54,17 @@ var route = function() {
 };
 
 
-function initializeBrick() {
-  // create an instance
-  var instance = Bricks({
-    container: '.projects',
-    packed: 'data-packed',
-    sizes: [{columns: 3, gutter: 25 }]
-  });
+function initializeGrid() {
+  var grid = document.querySelector('.projects');
+  var options = {
+    itemSelector: '.project',
+    isFitWidth: true,
+    columnWidth: '.grid-sizer',
+    gutter: 40
+  };
+  var msnry = new Masonry(grid, options);
 
-  instance.pack();
   document.querySelector('.projects').addEventListener('click', clickHandler);
-  console.log(instance);
 }
 
 function getMarkup(url, callback) {

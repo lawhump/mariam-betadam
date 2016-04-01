@@ -36,14 +36,51 @@ body {
   }
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
+p {
+  font-weight: light;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
+}
+
 .container {
-  > div {
+  margin: 3rem auto 0 auto;
+  max-width: 960px;
+  min-height: 60vh;
+  padding-bottom: 9rem;
+  transition: height .3s ease-out;
+  width: 90%;
+
+  // Hacky
+  > div:not(.links) {
     opacity: 0;
   }
+}
+
+.divider {
+  max-width: 960px;
+  width: 90%;
 }
 
 @include keyframes(fade-in) {

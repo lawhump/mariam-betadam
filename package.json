@@ -39,8 +39,5 @@
         "single"
       ]
     }
-  },
-  "dependencies": {
-    "bricks.js": "^1.1.1"
   }
 }
