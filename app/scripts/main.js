@@ -38,15 +38,15 @@ var route = function() {
   destination = location.hash;
   console.log(destination);
   if (destination == '#work') {
-    getMarkup('../markup/work.html', responseWorkHandler);
+    getMarkup('../work.html', responseWorkHandler);
   }
 
   else if (destination.length == 0) {
-    getMarkup('../markup/projects.html', responseProjsHandler);
+    getMarkup('../projects.html', responseProjsHandler);
   }
 
   else if (destination.includes('project')) {
-    getMarkup('../markup/project.html', responseProjHandler);
+    getMarkup('../project.html', responseProjHandler);
   }
 
   else {
