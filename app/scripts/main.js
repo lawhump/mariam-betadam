@@ -59,9 +59,9 @@ function initializeGrid() {
   var grid = document.querySelector('.projects');
   var options = {
     itemSelector: '.project',
-    percentPosition: true,
     columnWidth: '.grid-sizer',
-    gutter: '.gutter-sizer'
+    isFitWidth: true,
+    gutter: 10
   };
   var msnry = new Masonry(grid, options);
 
@@ -80,11 +80,12 @@ function getMarkup(url, callback) {
 }
 
 function clickHandler(e) {
-  if(e.target && e.target.nodeName == 'DIV') {
+  if(e.target && e.target.nodeName == 'IMG') {
 		// List item found!  Output the ID!
-    console.log(e.target.dataset.projectNumber);
+    var projectName = e.target.parentNode.dataset.projectName;
+    console.log(projectName);
     document.querySelector('.projects').className += 'fade-out';
-    window.location.hash = '#project/' + e.target.dataset.projectNumber;
+    window.location.hash = '#project/' + projectName;
 	}
 }
 
