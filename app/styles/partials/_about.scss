@@ -1,5 +1,5 @@
 #about {
-  max-width: 96rem;
+  max-width: $max-width;
   min-height: 0;
   position: relative;
   width: 90%;
@@ -11,7 +11,7 @@
   }
 
   p {
-    max-width: 48rem;
+    max-width: $max-width/2;
     width: 100%;
   }
 
