@@ -29,3 +29,40 @@
         @content;
     }
 }
+
+@mixin bg($url) {
+  background: url($url) no-repeat center center;
+  background-size: cover;
+}
+
+@mixin grid($items) {
+  @if $items == 3 {
+    -webkit-flex: 0 1 30.5%;
+  	flex: 0 1 30.5%;
+    margin: 0 4.25% 3% 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @else if $items == 2 {
+    -webkit-flex: 0 1 48%;
+  	flex: 0 1 48%;
+    margin: 0 3.25% 3% 0;
+
+    &:nth-child(3n) {
+      margin-right: auto;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @else {
+    -webkit-flex: 0 1 100%;
+  	flex: 0 1 100%;
+    margin: 0 0 3% 0;
+  }
+}

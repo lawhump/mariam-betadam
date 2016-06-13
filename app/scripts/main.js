@@ -56,14 +56,14 @@ var route = function() {
 
 
 function initializeGrid() {
-  var grid = document.querySelector('.projects');
-  var options = {
-    itemSelector: '.project',
-    columnWidth: '.grid-sizer',
-    isFitWidth: true,
-    gutter: 10
-  };
-  var msnry = new Masonry(grid, options);
+  // var grid = document.querySelector('.projects');
+  // var options = {
+  //   itemSelector: '.project',
+  //   columnWidth: '.grid-sizer',
+  //   isFitWidth: true,
+  //   gutter: 10
+  // };
+  // var msnry = new Masonry(grid, options);
 
   document.querySelector('.projects').addEventListener('click', clickHandler);
 }
@@ -80,9 +80,9 @@ function getMarkup(url, callback) {
 }
 
 function clickHandler(e) {
-  if(e.target && e.target.nodeName == 'IMG') {
+  if(e.target && e.target.nodeName == 'DIV') {
 		// List item found!  Output the ID!
-    var projectName = e.target.parentNode.dataset.projectName;
+    var projectName = e.target.dataset.projectName;
     console.log(projectName);
     document.querySelector('.projects').className += 'fade-out';
     window.location.hash = '#project/' + projectName;
