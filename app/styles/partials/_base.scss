@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  background: #fafafa;
+  background: #fff;
+  // background: #fafafa;
   border-left: $body-border-width solid #111;
   border-right: $body-border-width solid #111;
   color: $font-color;
@@ -57,11 +58,11 @@ h1 {
 }
 
 h2 {
-  color: $color-accent;
+
 }
 
 h3 {
-  color: $font-color-lite;
+
 }
 
 p {
@@ -124,4 +125,18 @@ a {
 .fade-out {
   @include animation('fade-in .8s ease-in-out');
   animation-fill-mode: forwards;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.centered {
+  text-align: center;
+}
+
+.vertically-centered {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }

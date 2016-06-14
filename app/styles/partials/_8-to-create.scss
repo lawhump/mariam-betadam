@@ -1,0 +1,49 @@
+.8-to-create {
+
+}
+
+.logo-form {
+  margin: 15rem 0;
+  position: relative;
+
+  > * {
+    display: inline-block;
+  }
+
+  .copy {
+    float: right;
+    left: 50%;
+    width: 50%;
+  }
+}
+
+.quad-day-cards {
+  @include full-width-grid(2);
+  margin-top: 15rem;
+  margin-bottom: 0;
+  position: relative;
+
+  img {
+    width: 50%;
+  }
+
+  .copy-wrapper {
+    position: relative;
+  }
+
+  .copy {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+  }
+}
+
+.yellow-pic {
+  // background: #F6E48F;
+  margin-left: calc(-1 * (100vw - 100%));
+  width: 100vw;
+
+  img {
+    width: 100vw;
+  }
+}

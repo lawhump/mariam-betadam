@@ -66,3 +66,34 @@
     margin: 0 0 3% 0;
   }
 }
+
+@mixin full-width-grid($items) {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-left: calc(-1 * ((100vw - 100% - 3.6rem) / #{$items}));
+  max-width: none;
+  width: 100vw;
+
+  @if $items == 3 {
+    > * {
+      -webkit-flex: 0 1 32.5%;
+    	flex: 0 1 32.5%;
+    }
+  }
+
+  @else if $items == 2 {
+    > * {
+      -webkit-flex: 0 1 49%;
+    	flex: 0 1 49%;
+    }
+  }
+
+  @else {
+    > * {
+      -webkit-flex: 0 1 100%;
+    	flex: 0 1 100%;
+    }
+  }
+}

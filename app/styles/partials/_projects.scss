@@ -1,3 +1,21 @@
+#placeholder {
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    color: $font-color-lite;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    letter-spacing: .17rem;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.7;
+  }
+}
+
 .projects {
   display: -webkit-flex;
 	display: flex;
@@ -77,4 +95,19 @@
 
 .project[data-project-name="galileo"] {
   @include bg('../images/landing/LandingGalileo.jpg');
+}
+
+.info {
+  margin: 0 auto;
+  max-width: $project-width;
+  text-align: center;
+  width: 50%;
+
+  h4 {
+    margin-top: 1rem;
+  }
+
+  p {
+    margin-top: 4rem;
+  }
 }
