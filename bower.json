@@ -1,20 +1,25 @@
 {
-  "name": "dank-memes",
+  "name": "mariam-betadam",
+  "description": "Personal site of visual designer Mariam Betadam",
+  "main": "",
+  "authors": [
+    "Lawrence Humphrey <lawrenceh1993@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lawhump/mariam-betadam",
   "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "modernizr": "~2.8.1",
-    "masonry": "^4.0.0"
-  },
-  "overrides": {
-    "modernizr": {
-      "main": "./modernizr.js"
-    },
-    "masonry": {
-      "main": ["./dist/masonry.pkgd.js"],
-      "dependencies": {}
-    },
-  "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "masonry": "^4.0.0",
+    "mocha": "^2.4.5",
+    "modernizr": "~2.8.1",
+    "susy": "^2.2.12"
   }
 }

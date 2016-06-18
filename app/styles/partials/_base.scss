@@ -4,14 +4,13 @@ html {
 
 body {
   background: #fff;
-  // background: #fafafa;
   border-left: $body-border-width solid #111;
   border-right: $body-border-width solid #111;
   color: $font-color;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 2.56rem;
-  margin: 0;
+  margin: -2rem 0;
   padding: 0;
   text-rendering: optimizeLegibility;
 
@@ -90,16 +89,8 @@ a {
 
 .container {
   margin: 3rem auto 0 auto;
-  max-width: $max-width;
-  min-height: 30vh;
-  padding-bottom: 9rem;
+  // padding-bottom: 9rem;
   transition: height .3s ease-out;
-  width: 90%;
-
-  // Hacky
-  > div:not(.links) {
-    opacity: 0;
-  }
 }
 
 .divider {
@@ -127,16 +118,49 @@ a {
   animation-fill-mode: forwards;
 }
 
-.left-align {
-  text-align: left;
-}
-
-.centered {
+.center {
+  margin: 0 auto;
   text-align: center;
 }
 
-.vertically-centered {
+.centered {
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+	-webkit-justify-content: center;
+	justify-content:center;
+}
+
+.spacing {
+  margin: 15rem 0;
+}
+
+.fullWidth {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+   width: 100vw;
+}
+
+article.project {
+  background-color: #fff;
+  border-left: $body-border-width solid #111;
+  border-right: $body-border-width solid #111;
+  left: 0;
+  margin: 0;
+  min-height: 100vh;
+  opacity: 0;
+  overflow: auto;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 0;
+  transition: z-index .5s ease-out,
+              opacity .3s ease-out .4s;
+  width: 100%;
+  z-index: -10;
+
+  &.active {
+    opacity: 1;
+    z-index: 10;
+  }
 }
