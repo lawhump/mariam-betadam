@@ -61,7 +61,21 @@ h2 {
 }
 
 h3 {
+  color: $font-color-lite;
+}
 
+h4 {
+  color: $font-color;
+  font-weight: bold;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+h6 {
+  color: $font-color-lite;
+  text-transform: lowercase;
 }
 
 p {
@@ -96,26 +110,6 @@ a {
 .divider {
   max-width: $max-width;
   width: 90%;
-}
-
-@include keyframes(fade-in) {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.fade-in {
-  @include animation('fade-in .8s ease-in-out');
-  animation-fill-mode: forwards;
-}
-
-@include keyframes(fade-out) {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.fade-out {
-  @include animation('fade-in .8s ease-in-out');
-  animation-fill-mode: forwards;
 }
 
 .center {

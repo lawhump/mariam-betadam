@@ -1,5 +1,4 @@
 'use strict';
-var about = document.getElementById('about');
 var placeholder = document.querySelector('article.project');
 
 var init = (function () {
@@ -17,6 +16,7 @@ var init = (function () {
   };
 
   api.responseHandler = function(res) {
+    window.scrollTo(0,0);
     placeholder.innerHTML = res;
     placeholder.classList.add('active');
   };
