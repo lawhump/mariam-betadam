@@ -21,7 +21,7 @@ var init = (function () {
     window.scrollTo(0,0);
     placeholder.innerHTML = res;
     placeholder.classList.add('active');
-    // landing.setAttribute('hidden', '');
+    landing.setAttribute('hidden', '');
   };
 
   api.isValidPath = function() {
