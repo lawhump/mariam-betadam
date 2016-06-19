@@ -151,6 +151,7 @@ article.project {
   transition: z-index .5s ease-out,
               opacity .3s ease-out .4s;
   width: 100%;
+  will-change: opacity, z-index;
   z-index: -10;
 
   &.active {

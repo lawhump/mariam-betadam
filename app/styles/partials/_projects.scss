@@ -9,10 +9,37 @@
   }
 }
 
+// project hover effect entirely inspired by
+// https://chilli.be/en
 .projects {
   margin-top: 10rem;
 
+  .other {
+    cursor: pointer;
+    position: relative;
+
+    img {
+      opacity: 0;
+      transition: opacity .18s ease-out;
+    }
+
+    h4 {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
   .project {
+    cursor: pointer;
     position: relative;
 
     h4 {
@@ -83,13 +110,22 @@
 .project-footer {
   margin: 4rem 0 7rem 0;
 
-  &:nth-child(2) {
+  div:nth-child(2) {
     text-align: center;
+  }
+
+  div:nth-child(3) {
+    text-align: right;
   }
 }
 
 .row img {
-  cursor: pointer;
   margin-bottom: 1.8rem;
   width: 100%;
+}
+
+.stacked {
+  img {
+    margin-bottom: 2.8rem;
+  }
 }
