@@ -119,6 +119,12 @@
   }
 }
 
+@media all and (max-width: 640px){
+  .project-footer div:nth-child(2) {
+    visibility: hidden;
+  }
+}
+
 .row img {
   margin-bottom: 1.8rem;
   width: 100%;
