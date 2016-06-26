@@ -2,6 +2,16 @@
 var landing = document.querySelector('.landing');
 var placeholder = document.querySelector('article.project');
 
+var validPaths = ["#/neutral",
+                       "#/multiplex-monograph",
+                       "#/8-to-create",
+                       "#/no-strings-attached",
+                       "#/cahoot",
+                       "#/menace-ultimate-frisbee",
+                       "#/louie",
+                       "#/bikenet",
+                       "#/bonfires-at-ocretyre"];
+
 var init = (function () {
   var api = {};
 
@@ -30,10 +40,7 @@ var init = (function () {
       api.destination = '#' + api.destination;
     }
 
-    if (path === '#/neutral' ||
-        path === '#/multiplex-monograph' ||
-        path === '#/8-to-create' ||
-        path === '#/no-strings-attached') {
+    if (validPaths.indexOf(path) >= 0) {
       return true;
     }
 

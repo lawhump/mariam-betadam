@@ -9,6 +9,12 @@
     margin: 8rem 0 2rem 0;
   }
 
+  @media all and (max-width: 640px) {
+    h1 {
+      margin: 4rem 0 2rem 0;
+    }
+  }
+
   h2 {
     margin-top: 1rem;
 
