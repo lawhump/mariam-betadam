@@ -36,7 +36,7 @@ var init = (function () {
 
   api.isValidPath = function() {
     var path = api.destination;
-    if (!path.includes('#')) {
+    if (path.indexOf('#') < 0) {
       api.destination = '#' + api.destination;
     }
 
