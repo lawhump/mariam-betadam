@@ -1,3 +1,16 @@
+@mixin font-face-Apercu($name, $weight, $style: normal) {
+  @font-face {
+    font-family: "Apercu";
+    font-weight: $weight;
+    font-style: $style;
+    src: url("../fonts/Apercu/#{$name}/ApercuPro-#{$name}.eot") format("eot"),
+         url("../fonts/Apercu/#{$name}/ApercuPro-#{$name}.woff2") format("woff2"),
+         url("../fonts/Apercu/#{$name}/ApercuPro-#{$name}.woff") format("woff"),
+         url("../fonts/Apercu/#{$name}/ApercuPro-#{$name}.ttf") format("truetype"),
+         url("../fonts/Apercu/#{$name}/ApercuPro-#{$name}.svg") format("svg");
+  }
+}
+
 @mixin animation($animate...) {
     $max: length($animate);
     $animations: '';

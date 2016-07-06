@@ -23,7 +23,7 @@
       transition: opacity .18s ease-out;
     }
 
-    h4 {
+    h6 {
       left: 50%;
       position: absolute;
       top: 50%;
@@ -42,7 +42,7 @@
     cursor: pointer;
     position: relative;
 
-    h4 {
+    h6 {
       backface-visibility: hidden;
       border: 0;
       left: 0;
@@ -62,14 +62,13 @@
       transition: all 0.2s ease-in-out;
     }
 
-    &:hover h4 {
+    &:hover h6 {
       opacity: 1;
       transition: all 0.3s ease-in 0.1s;
     }
   }
 
   .overlay {
-    background-color: #fff;
     backface-visibility: hidden;
     bottom: 1rem;
     height: auto;
@@ -83,6 +82,42 @@
     transform: translateZ(0);
     width: auto;
     z-index: 2;
+  }
+
+  [data-project="cahoot"] {
+    background-color: rgba(238, 131, 103, .85);
+  }
+
+  [data-project="mm"] {
+    background-color: rgba(13, 117, 165, .85);
+  }
+
+  [data-project="neutral"] {
+    background-color: rgba(black, .85);
+  }
+
+  [data-project="menace"] {
+    background-color: rgba(29, 64, 122, .85);
+  }
+
+  [data-project="bikenet"] {
+    background-color: rgba(67, 193, 199, .85);
+  }
+
+  [data-project="louie"] {
+    background-color: rgba(226, 103, 33, .85);
+  }
+
+  [data-project="bonfires"] {
+    background-color: rgba(black, .85);
+  }
+
+  [data-project="8-to-create"] {
+    background-color: rgba(black, .85);
+  }
+
+  [data-project="nsa"] {
+    background-color: rgba(159, 203, 183, .85);
   }
 }
 
@@ -104,7 +139,8 @@
 }
 
 .process {
-  margin-top: 7rem;
+  // Hacky but idk what's going on
+  margin-top: 30rem;
 }
 
 .project-footer {
