@@ -171,3 +171,7 @@ and (max-device-width : 480px) {
     border-right: none;
   }
 }
+
+.col-2 {
+  column-count: 2;
+}
