@@ -12,7 +12,7 @@
 // project hover effect entirely inspired by
 // https://chilli.be/en
 .projects {
-  margin-top: 20rem;
+  margin-top: 15rem;
 
   .other {
     cursor: pointer;
@@ -77,7 +77,7 @@
     opacity: 0;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: .5rem;
     transition: all 0.2s ease-in-out 0.1s;
     transform: translateZ(0);
     width: auto;
