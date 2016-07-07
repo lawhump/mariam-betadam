@@ -11,8 +11,7 @@ var validPaths = [
                     "#/menace-ultimate-frisbee",
                     "#/louie",
                     "#/bikenet",
-                    "#/bonfires-at-ocretyre",
-                    "#/"
+                    "#/bonfires-at-ocretyre"
                   ];
 
 var init = (function () {
@@ -53,15 +52,17 @@ var init = (function () {
   api.route = function() {
     api.destination = location.hash;
 
-    if (api.isValidPath()) {
-      var path = 'markup' + api.destination.split('#')[1] + '.html';
-      console.log(path);
-      api.getMarkup(path, api.responseHandler);
-    }
+    if (api.destination !== '') {
+      if (api.isValidPath()) {
+        var path = 'markup' + api.destination.split('#')[1] + '.html';
+        console.log(path);
+        api.getMarkup(path, api.responseHandler);
+      }
 
-    else {
-      window.location.href = window.location.host + window.location.pathname;
-      history.pushState("", document.title, window.location.pathname);
+      else {
+        window.location.href = window.location.host + window.location.pathname;
+        history.pushState("", document.title, window.location.pathname);
+      }
     }
   };
 
