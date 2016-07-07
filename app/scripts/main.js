@@ -2,15 +2,18 @@
 var landing = document.querySelector('.landing');
 var placeholder = document.querySelector('article.project');
 
-var validPaths = ["#/neutral",
-                       "#/multiplex-monograph",
-                       "#/8-to-create",
-                       "#/no-strings-attached",
-                       "#/cahoot",
-                       "#/menace-ultimate-frisbee",
-                       "#/louie",
-                       "#/bikenet",
-                       "#/bonfires-at-ocretyre"];
+var validPaths = [
+                    "#/neutral",
+                    "#/multiplex-monograph",
+                    "#/8-to-create",
+                    "#/no-strings-attached",
+                    "#/cahoot",
+                    "#/menace-ultimate-frisbee",
+                    "#/louie",
+                    "#/bikenet",
+                    "#/bonfires-at-ocretyre",
+                    "#/"
+                  ];
 
 var init = (function () {
   var api = {};
@@ -50,21 +53,15 @@ var init = (function () {
   api.route = function() {
     api.destination = location.hash;
 
-    if (api.destination !== '') {
-      if (api.isValidPath()) {
-        var path = 'markup' + api.destination.split('#')[1] + '.html';
-        console.log(path);
-        api.getMarkup(path, api.responseHandler);
+    if (api.isValidPath()) {
+      var path = 'markup' + api.destination.split('#')[1] + '.html';
+      console.log(path);
+      api.getMarkup(path, api.responseHandler);
+    }
 
-        // Remove hash from url
-        // var hash = window.location.hash.split('#')[1];
-        // history.pushState("", document.title, hash);
-      }
-
-      else {
-        window.location.href = window.location.host + window.location.pathname;
-        history.pushState("", document.title, window.location.pathname);
-      }
+    else {
+      window.location.href = window.location.host + window.location.pathname;
+      history.pushState("", document.title, window.location.pathname);
     }
   };
 

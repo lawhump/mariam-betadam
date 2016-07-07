@@ -1,3 +1,42 @@
 nav {
+  border-bottom: $border;
   font-size: 1.4rem;
+  padding-top: 10rem;
+  text-transform: uppercase;
+
+  img {
+    width: 10rem;
+  }
+}
+
+.nav-items {
+  display: inline-block;
+  float: right;
+  padding: 2rem 0;
+
+  li {
+    height: 100%;
+    position: relative;
+  }
+
+  li:not(:first-of-type) {
+    margin-left: 2rem;
+  }
+
+  .active {
+    &:after {
+      background-color: #555;
+      content: " ";
+      height: 5px;
+      left: 0;
+      position: absolute;
+      top: calc(100% + 2rem);
+      width: 100%;
+    }
+  }
+}
+
+.cta {
+  border-left: $border;
+  padding-left: 2rem;
 }

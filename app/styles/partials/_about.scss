@@ -1,46 +1,12 @@
 .about {
-  // max-width: $max-width;
   min-height: 0;
-  padding-top: 17rem;
+  padding-top: 5rem;
   position: relative;
-  // width: 90%;
 
-  h1 {
-    margin: 8rem 0 2rem 0;
-  }
-
-  @media all and (max-width: 640px) {
-    h1 {
-      margin: 4rem 0 2rem 0;
-    }
-  }
-
-  h2 {
-    margin-top: 1rem;
-
-    a {
-      color: $color-accent;
-    }
-  }
-
-  h3 a {
-    color: $font-color-lite;
-  }
-
-  p {
-    // max-width: $max-width/2;
-    width: 100%;
-  }
-
-  &:before {
-    // border-bottom: $border;
-    content: '';
-    left: 0;
-    margin-top: 12rem;
-    max-width: 20rem;
-    position: absolute;
-    top: -22rem;
-    width: 100%;
+  .resume {
+    border-right: $border;
+    margin-right: 2rem;
+    padding-right: 2rem;
   }
 }
 

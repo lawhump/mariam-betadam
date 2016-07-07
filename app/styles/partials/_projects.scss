@@ -159,9 +159,13 @@
   .project-footer div:nth-child(2) {
     visibility: hidden;
   }
+
+  .other {
+    display: none;
+  }
 }
 
-.row img {
+.row img:not(.logo) {
   margin-bottom: 1.8rem;
   width: 100%;
 }
