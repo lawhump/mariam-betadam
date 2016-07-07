@@ -32,7 +32,10 @@ var init = (function () {
   api.responseHandler = function(res) {
     window.scrollTo(0,0);
     placeholder.innerHTML = res;
-    placeholder.classList.add('active');
+    placeholder.removeAttribute('hidden');
+    window.setTimeout(function() {
+      placeholder.classList.add('active');
+    }, 100);
     landing.setAttribute('hidden', '');
   };
 
@@ -55,7 +58,6 @@ var init = (function () {
     if (api.destination !== '') {
       if (api.isValidPath()) {
         var path = 'markup' + api.destination.split('#')[1] + '.html';
-        console.log(path);
         api.getMarkup(path, api.responseHandler);
       }
 
@@ -63,6 +65,13 @@ var init = (function () {
         window.location.href = window.location.host + window.location.pathname;
         history.pushState("", document.title, window.location.pathname);
       }
+    }
+
+    else {
+      console.log('bro');
+      placeholder.classList.remove('active');
+      placeholder.setAttribute('hidden', '');
+      landing.removeAttribute('hidden', '');
     }
   };
 
