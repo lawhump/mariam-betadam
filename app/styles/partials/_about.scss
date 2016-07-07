@@ -3,6 +3,10 @@
   padding-top: 5rem;
   position: relative;
 
+  a {
+    font-weight: 500;
+  }
+
   .resume {
     border-right: $border;
     margin-right: 2rem;
@@ -10,6 +14,9 @@
   }
 }
 
+.coming-soon {
+  margin-bottom: 40rem;
+}
 
 .links {
   li:first-of-type {

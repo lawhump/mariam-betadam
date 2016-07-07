@@ -1,9 +1,9 @@
 @include font-face-Apercu(Regular, 400);
 @include font-face-Apercu(Italic, 400, italic);
 @include font-face-Apercu(Medium, 500);
-@include font-face-Apercu(Medium, 500, italic);
+@include font-face-Apercu(MediumItalic, 500, italic);
 @include font-face-Apercu(Bold, 700);
-@include font-face-Apercu(Bold, 700, italic);
+@include font-face-Apercu(BoldItalic, 700, italic);
 
 html {
   font-size: 62.5%;
@@ -69,6 +69,7 @@ h2 {
 }
 
 h3 {
+  color: $font-color-lite;
   font-size: 1.7rem;
   font-style: italic;
 }

@@ -12,7 +12,7 @@
 // project hover effect entirely inspired by
 // https://chilli.be/en
 .projects {
-  margin-top: 10rem;
+  margin-top: 20rem;
 
   .other {
     cursor: pointer;
@@ -85,7 +85,7 @@
   }
 
   [data-project="cahoot"] {
-    background-color: rgba(238, 131, 103, .85);
+    background-color: rgba(202, 111, 87, .85);
   }
 
   [data-project="mm"] {
@@ -101,7 +101,7 @@
   }
 
   [data-project="bikenet"] {
-    background-color: rgba(67, 193, 199, .85);
+    background-color: rgba(59, 173, 178, .85);
   }
 
   [data-project="louie"] {
@@ -109,7 +109,7 @@
   }
 
   [data-project="bonfires"] {
-    background-color: rgba(black, .85);
+    background-color: rgba(203, 191, 128, .85);
   }
 
   [data-project="8-to-create"] {

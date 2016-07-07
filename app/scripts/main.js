@@ -68,7 +68,6 @@ var init = (function () {
     }
 
     else {
-      console.log('bro');
       placeholder.classList.remove('active');
       placeholder.setAttribute('hidden', '');
       landing.removeAttribute('hidden', '');
