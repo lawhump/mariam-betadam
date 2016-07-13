@@ -108,7 +108,7 @@
     background-color: rgba(226, 103, 33, .85);
   }
 
-  [data-project="bonfires"] {
+  [data-project="bonfires-at-ocretyre"] {
     background-color: rgba(203, 191, 128, .85);
   }
 
@@ -146,12 +146,26 @@
 .project-footer {
   margin: 4rem 0 7rem 0;
 
+  div:first-child {
+    h4:before {
+      content: "‹";
+      right: 1rem;
+      position: relative;
+    }
+  }
+
   div:nth-child(2) {
     text-align: center;
   }
 
   div:nth-child(3) {
     text-align: right;
+
+    h4:after {
+      content: "›";
+      left: 1rem;
+      position: relative;
+    }
   }
 }
 

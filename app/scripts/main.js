@@ -83,4 +83,3 @@ var init = (function () {
 
   window.onhashchange = app.route;
 })();
-// document.querySelector('.projects').addEventListener('click', clickHandler);
