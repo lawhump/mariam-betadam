@@ -1,7 +1,7 @@
 'use strict';
+var show;
 var landing = document.querySelector('.landing');
 var placeholder = document.querySelector('article.project');
-
 var validPaths = [
                     "#/neutral",
                     "#/multiplex-monograph",
@@ -29,6 +29,12 @@ var init = (function () {
     xmlHttp.send(null);
   };
 
+  api.goHome = function() {
+    placeholder.classList.remove('active');
+    placeholder.setAttribute('hidden', '');
+    landing.removeAttribute('hidden', '');
+  };
+
   api.responseHandler = function(res) {
     window.scrollTo(0,0);
     placeholder.innerHTML = res;
@@ -37,6 +43,25 @@ var init = (function () {
       placeholder.classList.add('active');
     }, 100);
     landing.setAttribute('hidden', '');
+  };
+
+  api.show = function(section) {
+    function resetURL() {
+      if(history.pushState) {
+        history.pushState(null, null, '#');
+      }
+      else {
+        location.hash = '#';
+      }
+    }
+    function goToSection() {
+      console.log(section);
+      section.scrollIntoView();
+    }
+
+    api.goHome();
+    resetURL();
+    goToSection();
   };
 
   api.isValidPath = function() {
@@ -68,18 +93,21 @@ var init = (function () {
     }
 
     else {
-      placeholder.classList.remove('active');
-      placeholder.setAttribute('hidden', '');
-      landing.removeAttribute('hidden', '');
+      api.goHome();
     }
   };
 
   return api;
 })();
 
+
 (function() {
   var app = init;
   app.route();
+
+  show = function(section) {
+    app.show(section);
+  };
 
   window.onhashchange = app.route;
 })();

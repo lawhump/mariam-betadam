@@ -50,8 +50,8 @@
       </div>
       <div class="small-7 medium-6 columns">
         <ul class="nav-items">
-          <li class="active"><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
+          <li class="active"><button onclick="show(about);">About</button></li>
+          <li><button onclick="show(work);">Work</button></li>
           <li class="cta"><a href="mailto:mbetadam1@gmail.com">Contact</a></li>
         </ul>
       </div>
@@ -59,7 +59,7 @@
 
     <div class="dynamic-container">
       <article class="landing">
-        <section class="about row">
+        <section id="about" class="about row">
           <div class="small-10 medium-8 large-6 column">
             <h3>
               <a class="resume" href="#">resume</a>
@@ -82,7 +82,7 @@
           </div>
         </section>
 
-        <section class="projects-wrapper row column">
+        <section id="work" class="projects-wrapper row column">
           <div class="projects row">
             <div class="small-12 medium-6 large-4 columns project">
               <a href="#/cahoot">

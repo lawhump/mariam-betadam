@@ -1,11 +1,23 @@
 nav {
-  border-bottom: $border;
   font-size: 1.4rem;
+  overflow-x: hidden;
   padding-top: 10rem;
+  position: relative;
   text-transform: uppercase;
 
   img {
     width: 10rem;
+  }
+
+  &:after {
+    background-color: black;
+    content: " ";
+    height: .1rem;
+    left: 50%;
+    position: absolute;
+    top: 99.5%;
+    transform: translateX(-50%);
+    width: calc(100% - 1.875rem);
   }
 }
 
