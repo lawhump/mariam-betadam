@@ -66,6 +66,14 @@
       opacity: 1;
       transition: all 0.3s ease-in 0.1s;
     }
+
+    &:nth-child(n+4):nth-child(-n+6) {
+      // opacity: 0;
+    }
+
+    &:nth-child(n+5):nth-child(-n+9) {
+      // opacity: 0;
+    }
   }
 
   .overlay {
