@@ -26,37 +26,25 @@
     position: relative;
     width: 90%;
 
-    // &:after {
-    //   clear: both;
-    //   content: ".";
-    //   display: block;
-    //   height: 0;
-    //   visibility: hidden;
-    // }
+    &:after {
+      background-color: rgba(black, 1);
+      content: " ";
+      height: 1px;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      transition: background-color .3s ease-out;
+      width: 100%;
+    }
 
     &:hover {
       // border-bottom: 2px solid rgba(black, 1);
-
-      a:after {
-        background-color: rgba(black, 1);
-      }
     }
 
     a {
       clear: right;
       float: right;
-      position: relative;
-
-      &:after {
-        background-color: rgba(black, 1);
-        content: " ";
-        height: 3px;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        transition: background-color .3s ease-out;
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 }
