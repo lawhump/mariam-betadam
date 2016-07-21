@@ -33,7 +33,7 @@ nav {
   li {
     position: relative;
 
-    &:not(:last-of-type) {
+    &:not(:last-child) {
       display: none;
     }
   }
@@ -71,9 +71,8 @@ nav {
 
 @media screen and (min-width: 640px) {
   .nav-items {
-    li:not(:last-of-type) {
-        display: list-item;
+    li:not(:last-child) {
+        display: inline;
       }
-    }
   }
 }
