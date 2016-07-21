@@ -1,5 +1,4 @@
 'use strict';
-var show;
 var landing = document.querySelector('.landing');
 var placeholder = document.querySelector('article.project');
 var validPaths = [
@@ -51,25 +50,6 @@ var init = (function () {
       placeholder.classList.add('active');
     }, 100);
     landing.setAttribute('hidden', '');
-  };
-
-  api.show = function(section) {
-    function resetURL() {
-      if(history.pushState) {
-        history.pushState(null, null, '#');
-      }
-      else {
-        location.hash = '#';
-      }
-    }
-    function goToSection() {
-      console.log(section);
-      section.scrollIntoView();
-    }
-
-    api.goHome();
-    resetURL();
-    goToSection();
   };
 
   api.isValidPath = function() {
@@ -143,10 +123,6 @@ var init = (function () {
 (function() {
   var app = init;
   app.route();
-
-  show = function(section) {
-    app.show(section);
-  };
 
   window.onhashchange = app.route;
 })();
