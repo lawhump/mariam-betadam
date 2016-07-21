@@ -172,3 +172,22 @@ article.project {
 .col-2 {
   column-count: 2;
 }
+
+
+@include keyframes(fadeIn) {
+  0%   {
+    display: none;
+    opacity: 0;
+  }
+  1%   {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  @include animation('fadeIn .5s ease-in-out');
+  animation-fill-mode: forwards;
+}

@@ -1,12 +1,16 @@
 nav {
-  font-size: 1.4rem;
-  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 110rem;
   padding-top: 10rem;
   position: relative;
-  text-transform: uppercase;
+  width: 98%;
 
   img {
     width: 10rem;
+  }
+
+  > div {
+    display: inline;
   }
 
   &:after {
@@ -14,25 +18,28 @@ nav {
     content: " ";
     height: .1rem;
     left: 50%;
+    pointer-events: none;
     position: absolute;
-    top: 99.5%;
+    top: 100.5%;
     transform: translateX(-50%);
-    width: calc(100% - 1.875rem);
+    width: 100%;
   }
 }
 
 .nav-items {
-  display: inline-block;
+  display: inline;
   float: right;
-  padding: 2rem 0;
 
   li {
-    height: 100%;
     position: relative;
   }
 
-  li:not(:first-of-type) {
-    margin-left: 2rem;
+  button {
+    padding: 2.5rem .5rem;
+  }
+
+  a {
+    text-transform: uppercase;
   }
 
   .active {
@@ -41,10 +48,15 @@ nav {
       content: " ";
       height: 5px;
       left: 0;
+      pointer-events: none;
       position: absolute;
-      top: calc(100% + 2rem);
+      top: calc(100% + 1.8rem);
       width: 100%;
     }
+  }
+
+  > li:not(:first-of-type) {
+    margin-left: 2rem;
   }
 }
 
