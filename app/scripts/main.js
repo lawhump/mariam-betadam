@@ -38,6 +38,9 @@ var init = (function () {
     placeholder.classList.remove('active');
     placeholder.setAttribute('hidden', '');
     landing.removeAttribute('hidden', '');
+
+    document.querySelector('nav .active').classList.remove('active');
+    document.querySelector('nav .about').classList.add('active');
   };
 
   api.responseHandler = function(res) {
@@ -86,9 +89,12 @@ var init = (function () {
     api.destination = location.hash;
 
     if (api.destination !== '') {
+      var active = document.querySelector('nav .active');
       if (api.isValidPath()) {
         var path = 'markup' + api.destination.split('#')[1] + '.html';
         api.getMarkup(path, api.responseHandler);
+        active.classList.remove('active');
+        document.querySelector('.dropdown-wrapper').classList.add('active');
       }
 
       else {
