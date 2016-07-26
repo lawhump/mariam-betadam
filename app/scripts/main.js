@@ -91,10 +91,6 @@ var init = (function () {
   return api;
 })();
 
-function goToTop() {
-  window.scrollTo(0,0);
-}
-
 // var last_known_scroll_position = 0;
 // var ticking = false;
 //

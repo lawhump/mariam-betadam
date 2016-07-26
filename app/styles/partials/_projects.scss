@@ -175,6 +175,10 @@
       position: relative;
     }
   }
+
+  span {
+    cursor: pointer;
+  }
 }
 
 @media all and (max-width: 640px){
