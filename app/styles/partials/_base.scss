@@ -157,14 +157,16 @@ article.project {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: z-index .5s ease-out,
-              opacity .3s ease-out .4s;
+  transition: z-index .3s ease-out,
+              opacity .3s ease-out;
   width: 100%;
   will-change: opacity, z-index;
   z-index: -10;
 
   &.active {
     opacity: 1;
+    transition: z-index .2s ease-out,
+                opacity .2s ease-out .5s;
     z-index: 10;
   }
 }

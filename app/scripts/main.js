@@ -44,11 +44,23 @@ var init = (function () {
 
   api.responseHandler = function(res) {
     window.scrollTo(0,0);
-    placeholder.innerHTML = res;
     placeholder.removeAttribute('hidden');
-    window.setTimeout(function() {
-      placeholder.classList.add('active');
-    }, 100);
+    if (placeholder.classList.contains('active')) {
+      console.log('contains active');
+      placeholder.classList.remove('active');
+
+      window.setTimeout(function() {
+        placeholder.classList.add('active');
+        placeholder.innerHTML = res;
+      }, 400);
+    }
+
+    else {
+      window.setTimeout(function() {
+        placeholder.classList.add('active');
+        placeholder.innerHTML = res;
+      }, 100);
+    }
     landing.setAttribute('hidden', '');
   };
 
@@ -90,34 +102,6 @@ var init = (function () {
 
   return api;
 })();
-
-// var last_known_scroll_position = 0;
-// var ticking = false;
-//
-// function checkThreshhold(scrollPos) {
-//   // do something with the scroll position
-//   // console.log("scroll pos: " + scrollPos);
-//   // console.log("second row threshhold: " + secondRowThreshhold);
-//   if (scrollPos>secondRowThreshhold) {
-//     if (scrollPos>thirdRowThreshhold) {
-//       console.log("Show second and third row");
-//     }
-//     else {
-//       console.log("Show second row");
-//     }
-//   }
-// }
-
-// window.addEventListener('scroll', function(e) {
-//   last_known_scroll_position = window.scrollY;
-//   if (!ticking) {
-//     window.requestAnimationFrame(function() {
-//       checkThreshhold(last_known_scroll_position);
-//       ticking = false;
-//     });
-//   }
-//   ticking = true;
-// });
 
 (function() {
   var app = init;
