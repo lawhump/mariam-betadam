@@ -141,7 +141,6 @@ var init = (function () {
     // window.scrollTo(0,0);
     placeholder.removeAttribute('hidden');
     if (placeholder.classList.contains('active')) {
-      console.log('contains active');
       placeholder.classList.remove('active');
 
       window.setTimeout(function() {

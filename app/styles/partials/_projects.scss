@@ -157,7 +157,7 @@
   div:first-child {
     h4:before {
       content: "‹";
-      right: 1rem;
+      right: .8rem;
       position: relative;
     }
   }
@@ -171,7 +171,7 @@
 
     h4:after {
       content: "›";
-      left: 1rem;
+      left: .8rem;
       position: relative;
     }
   }
