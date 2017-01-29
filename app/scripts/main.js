@@ -12,6 +12,7 @@ var validPaths = [
                     "#/bikenet",
                     "#/mehu",
                     "#/drawings",
+                    "#/portraits",
                     "#/bonfires-at-ocretyre"
                   ];
 
