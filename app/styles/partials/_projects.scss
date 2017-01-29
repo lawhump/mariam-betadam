@@ -189,6 +189,23 @@
   }
 }
 
+.row {
+  .caption-wrapper {
+    text-align: center;
+  }
+
+  .caption {
+    display: inline-block;
+    margin: 40% 0;
+    max-width: 30rem;
+    width: 90%;
+  }
+
+  .content {
+    text-align: left;
+  }
+}
+
 @media all and (max-width: 640px){
   .project-footer div:nth-child(2) {
     visibility: hidden;
