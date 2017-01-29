@@ -10,6 +10,8 @@ var validPaths = [
                     "#/menace-ultimate-frisbee",
                     "#/louie",
                     "#/bikenet",
+                    "#/mehu",
+                    "#/drawings",
                     "#/bonfires-at-ocretyre"
                   ];
 
